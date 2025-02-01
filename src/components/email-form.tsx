@@ -42,14 +42,14 @@ const EmailForm = () => {
                 subject: values.subject,
                 text: mailText,
             });
-            if (response?.messageId) {
+
+            if (response?.accepted) {
                 toast.success('Email Sent Successfully.');
                 form.reset()
-            } else {
-                toast.error('Failed To send the email.');
             }
         } catch (error) {
             console.error(error)
+            toast.error('Failed To send the email.');
         } finally {
             setLoading(false);
         }

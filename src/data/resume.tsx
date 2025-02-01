@@ -436,6 +436,89 @@ export const DATA = {
             type: "web"
         },
     ],
+    certifications: [
+        {
+            "title": "Microsoft Certified: Azure Administrator Associate",
+            "href": "https://learn.microsoft.com/api/credentials/share/en-us/21BCE10150AkshayKumarPandey-0378/3C2FB819A29D9378?sharingId=39940BDFAB930EFA",
+            "location": "Remote",
+            "provider": "Microsoft",
+            "logoUrl": "https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg",
+            "start": "October 2023",
+            "end": "October 2025",
+            "description": "Earned Microsoft Azure Administrator certification with a 765/1000 score. Gained expertise in managing Azure identities, governance, networking, storage, and computing resources."
+        },
+        {
+            "title": "Start the UX Design Process: Empathize, Define, and Ideate",
+            "href": "https://coursera.org/share/565da0f139cf45e23ea7ab3e0fe6ecdc",
+            "location": "Remote",
+            "provider": "Coursera",
+            "logoUrl": "https://seekvectorlogo.com/wp-content/uploads/2022/02/coursera-vector-logo-2022.png",
+            "start": "December 2022",
+            "end": "Lifetime",
+            "description": "Completed a UX design course covering research, empathy mapping, and ideation techniques. Developed skills in user-centered design, problem identification, and brainstorming solutions."
+        },
+        {
+            "title": "Build Wireframes and Low-Fidelity Prototypes",
+            "href": "https://coursera.org/share/dae23e2559c07797f8b0783b60b0049d",
+            "location": "Remote",
+            "provider": "Coursera",
+            "logoUrl": "https://seekvectorlogo.com/wp-content/uploads/2022/02/coursera-vector-logo-2022.png",
+            "start": "December 2022",
+            "end": "Lifetime",
+            "description": "Learned to create wireframes and low-fidelity prototypes for UX design. Explored best practices for structuring user interfaces and improving usability through early-stage designs."
+        },
+        {
+            "title": "Beginning C++ Programming - From Beginner to Beyond",
+            "href": "/certificates/udemy-cpp.pdf",
+            "location": "Remote",
+            "provider": "Udemy",
+            "logoUrl": "https://upload.wikimedia.org/wikipedia/commons/e/e3/Udemy_logo.svg",
+            "start": "June 2023",
+            "end": "Lifetime",
+            "description": "Mastered C++ programming fundamentals, including object-oriented programming, memory management, and data structures. Built real-world applications and improved problem-solving skills."
+        },
+        {
+            "title": "React - The Complete Guide 2025 (incl. Next.js, Redux)",
+            "href": "/certificates/udemy-react.pdf",
+            "location": "Remote",
+            "provider": "Udemy",
+            "logoUrl": "https://upload.wikimedia.org/wikipedia/commons/e/e3/Udemy_logo.svg",
+            "start": "December 2023",
+            "end": "Lifetime",
+            "description": "Gained in-depth knowledge of React, Next.js, and Redux for modern web development. Implemented dynamic UI components, state management, and server-side rendering techniques."
+        },
+        {
+            "title": "MERN 2025 Edition - MongoDB, Express, React and NodeJS",
+            "href": "https://www.udemy.com/certificate/UC-ce21beca-0d9a-4e6f-a3e7-37ecd5e4b3f1/",
+            "location": "Remote",
+            "provider": "Udemy",
+            "logoUrl": "https://upload.wikimedia.org/wikipedia/commons/e/e3/Udemy_logo.svg",
+            "start": "January 2024",
+            "end": "Lifetime",
+            "description": "Completed an advanced MERN stack course covering full-stack web development. Learned backend APIs with Express, frontend integration with React, and database handling with MongoDB."
+        },
+        {
+            "title": "Java Spring Framework 6 with Spring Boot 3",
+            "href": "/certificates/udemy-spring-boot.pdf",
+            "location": "Remote",
+            "provider": "Udemy",
+            "logoUrl": "https://upload.wikimedia.org/wikipedia/commons/e/e3/Udemy_logo.svg",
+            "start": "August 2024",
+            "end": "Lifetime",
+            "description": "Acquired hands-on experience in building scalable Java applications with Spring Boot. Developed RESTful APIs, implemented microservices, and optimized backend architecture."
+        },
+        {
+            "title": "Nptel Cloud Computing",
+            "href": "/certificates/nptel.pdf",
+            "location": "In Person",
+            "provider": "Nptel",
+            "logoUrl": "/nptel-logo.jpg",
+            "start": "May 2024",
+            "end": "Lifetime",
+            "description": "Achieved 86% in an advanced Cloud Computing course covering virtualization, distributed computing, and cloud security. Explored cloud service models and deployment strategies."
+        }
+    ]
+    ,
     extraCurricular: [
         {
             title: "Igniters Technical Co-Lead",

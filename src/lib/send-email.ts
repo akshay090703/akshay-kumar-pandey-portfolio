@@ -47,8 +47,8 @@ export async function sendMail({
     text: text,
     html: html || "",
   });
-  console.log(info);
-  console.log("Message Sent", info.messageId);
+  //   console.log(info);
+  //   console.log("Message Sent", info.messageId);
   console.log("Mail sent to", SITE_MAIL_RECIEVER);
   return info;
 }

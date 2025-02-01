@@ -162,6 +162,31 @@ export default function Home() {
         </div>
       </section>
 
+      <section id="certifications">
+        <div className="flex min-h-0 flex-col gap-y-3">
+          <BlurFade delay={BLUR_FADE_DELAY * 5}>
+            <h2 className="text-xl font-bold mb-2">Certifications</h2>
+          </BlurFade>
+          {DATA.certifications.map((certificate, id) => (
+            <BlurFade
+              key={id}
+              delay={BLUR_FADE_DELAY * 6 + id * 0.05}
+            >
+              <ResumeCard
+                key={id}
+                logoUrl={certificate.logoUrl}
+                altText={certificate.provider}
+                title={certificate.title}
+                subtitle={certificate.provider}
+                href={certificate.href}
+                period={`${certificate.start} - ${certificate.end ?? "Present"}`}
+                description={certificate.description}
+              />
+            </BlurFade>
+          ))}
+        </div>
+      </section>
+
       <section id="extra-curricular">
         <div className="space-y-12 w-full py-12">
           <BlurFade delay={BLUR_FADE_DELAY * 13}>
@@ -175,7 +200,7 @@ export default function Home() {
                 </h2>
                 <p className="text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
                   During my time in university, I participated {" "}
-                  {DATA.extraCurricular.length}+ club activities. People from around the
+                  various club activities. People from around the
                   college would come to our organized events and enjoy after a stressful day at college. It was eye-opening to see the endless creativity
                   brought to life by a group of motivated and passionate
                   individuals.

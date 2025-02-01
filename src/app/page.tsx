@@ -248,7 +248,7 @@ export default function Home() {
                   className="text-blue-500 hover:underline"
                 >
                   with a direct question on Instagram
-                </Link>{" "}
+                </Link>{" "} or LinkedIn
                 and I&apos;ll respond whenever I can. I will ignore all
                 soliciting.
               </p>

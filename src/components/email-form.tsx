@@ -43,10 +43,8 @@ const EmailForm = () => {
                 text: mailText,
             });
 
-            if (response?.accepted) {
-                toast.success('Email Sent Successfully.');
-                form.reset()
-            }
+            toast.success('Email Sent Successfully.');
+            form.reset()
         } catch (error) {
             console.error(error)
             toast.error('Failed To send the email.');

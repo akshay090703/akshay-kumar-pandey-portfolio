@@ -6,6 +6,7 @@ import { ThemeProvider } from "@/contexts/theme-provider";
 import { DATA } from "@/data/resume";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import Navbar from "@/components/navbar";
+import { Toaster } from 'sonner';
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -67,7 +68,7 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning>
       <body
         className={cn(
-          "min-h-screen bg-background font-sans antialiased max-w-3xl mx-auto py-12 sm:py-24 px-6",
+          "min-h-screen bg-background font-sans antialiased max-w-4xl mx-auto py-12 sm:py-24 px-6",
           fontSans.variable
         )}
       >
@@ -80,6 +81,7 @@ export default function RootLayout({
             {children}
             <Navbar />
           </TooltipProvider>
+          <Toaster />
         </ThemeProvider>
       </body>
     </html>

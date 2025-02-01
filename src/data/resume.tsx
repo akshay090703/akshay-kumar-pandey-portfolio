@@ -1,5 +1,14 @@
 import { Icons } from "@/components/icons";
 import { HomeIcon, Instagram, NotebookIcon } from "lucide-react";
+import CareerTracker from "../../public/projects/career-tracker.png"
+import DevInsight from "../../public/projects/dev-insight.png"
+import EcoSort from "../../public/projects/eco-sort.png"
+import JourneyGenie from "../../public/projects/journie-genie.jpg"
+import LearnQuest from "../../public/projects/learn-quest.png"
+import PennyPlanner from "../../public/projects/penny-planner.png"
+import PrepVue from "../../public/projects/prep-vue.png"
+import SmartLink from "../../public/projects/smart-link.png"
+import Talkrr from "../../public/projects/talkrr.png"
 
 export const DATA = {
     name: "Akshay Kumar Pandey",
@@ -163,9 +172,10 @@ export const DATA = {
                     icon: <Icons.github className="size-3" />,
                 },
             ],
-            image: "",
+            image: DevInsight,
             video:
                 "",
+            type: "web"
         },
         {
             title: "SmartLink",
@@ -195,8 +205,9 @@ export const DATA = {
                     icon: <Icons.github className="size-3" />,
                 },
             ],
-            image: "",
+            image: SmartLink,
             video: "",
+            type: "web"
         },
         {
             title: "Garbage Classification",
@@ -233,8 +244,9 @@ export const DATA = {
                     icon: <Icons.github className="size-3" />,
                 },
             ],
-            image: "",
+            image: EcoSort,
             video: "",
+            type: "web"
         },
         {
             title: "Talkrr",
@@ -264,9 +276,10 @@ export const DATA = {
                     icon: <Icons.github className="size-3" />,
                 },
             ],
-            image: "",
+            image: Talkrr,
             video:
                 "",
+            type: "web"
         },
         {
             title: "LearnQuest",
@@ -296,9 +309,10 @@ export const DATA = {
                     icon: <Icons.github className="size-3" />,
                 },
             ],
-            image: "",
+            image: LearnQuest,
             video:
                 "",
+            type: "web"
         },
         {
             title: "PennyPlanner",
@@ -320,9 +334,10 @@ export const DATA = {
                     icon: <Icons.github className="size-3" />,
                 },
             ],
-            image: "",
+            image: PennyPlanner,
             video:
                 "",
+            type: "app"
         },
         {
             title: "JourneyGenie",
@@ -347,9 +362,10 @@ export const DATA = {
                     icon: <Icons.github className="size-3" />,
                 },
             ],
-            image: "",
+            image: JourneyGenie,
             video:
                 "",
+            type: "app"
         },
         {
             title: "PrepVue",
@@ -381,9 +397,10 @@ export const DATA = {
                     icon: <Icons.github className="size-3" />,
                 },
             ],
-            image: "",
+            image: PrepVue,
             video:
                 "",
+            type: "web"
         },
         {
             title: "CareerTracker",
@@ -413,9 +430,10 @@ export const DATA = {
                     icon: <Icons.github className="size-3" />,
                 },
             ],
-            image: "",
+            image: CareerTracker,
             video:
                 "",
+            type: "web"
         },
     ],
     extraCurricular: [

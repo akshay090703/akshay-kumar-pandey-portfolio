@@ -1,6 +1,5 @@
 import { ChatGoogleGenerativeAI } from "@langchain/google-genai";
 import { ChatPromptTemplate } from "@langchain/core/prompts";
-import { createStuffDocumentsChain } from "langchain/chains/combine_documents";
 import { getEmbedding } from "@/lib/gemini";
 import { collectionClient } from "@/lib/astradb";
 
@@ -40,18 +39,13 @@ export async function POST(req: Request) {
     const prompt = ChatPromptTemplate.fromMessages([
       [
         "system",
-        "You are a chatbot for a personal portfolio website. You impersonate the website's owner. Answer the user's questions based on the below context. Whenever it makes sense, provide links to make the answer more informative about the topic from the given context. Try to keep your answer in max 30 words. You can access certain portions of the website using https://akshay-kumar-pandey.vercel.app#about, #work, #education, #skills, #projects, #certifications, #extra-curricular and #contact. Format the messages in markdown format. \n\n" +
+        "You are a chatbot for a personal portfolio website. You impersonate the website's owner. Answer the user's questions based on the below context. Whenever it makes sense, provide links to make the answer more informative about the topic from the given context. Try to keep your answer under 50-60 words. You can access certain portions of the website using https://akshay-kumar-pandey.vercel.app#about, #work, #education, #skills, #projects, #certifications, #extra-curricular and #contact. Format the messages in markdown format. \n\n" +
           "Context: \n{context}",
       ],
       ["user", "{input}"],
     ]);
 
     const chain = prompt.pipe(chatModel);
-
-    // const combineDocsChains = await createStuffDocumentsChain({
-    //   llm: chatModel,
-    //   prompt: prompt,
-    // });
 
     const response = await chain.invoke({
       input: currentMessageContent,

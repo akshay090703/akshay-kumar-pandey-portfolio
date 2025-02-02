@@ -1,3 +1,6 @@
+"use client"
+
+import AiChatBox from "@/components/AiChatBox";
 import EmailForm from "@/components/email-form";
 import { ExtraCurricularCard } from "@/components/extraCurricularCard";
 import { ProjectCard } from "@/components/project-card";
@@ -6,6 +9,7 @@ import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Badge } from "@/components/ui/bagde";
 import BlurFade from "@/components/ui/blur-fade";
 import BlurFadeText from "@/components/ui/blur-fade-text";
+import { useAiChat } from "@/contexts/AiChatContext";
 import { DATA } from "@/data/resume";
 import Link from "next/link";
 import Markdown from "react-markdown"
@@ -13,6 +17,8 @@ import Markdown from "react-markdown"
 const BLUR_FADE_DELAY = 0.04;
 
 export default function Home() {
+  const { chatboxOpen, setChatboxOpen } = useAiChat()
+
   return (
     <main className="flex flex-col min-h-[100dvh] space-y-10">
       <section id="hero">
@@ -256,6 +262,8 @@ export default function Home() {
           </BlurFade>
         </div>
       </section>
+
+      <AiChatBox open={chatboxOpen} onClose={() => setChatboxOpen(false)} />
     </main>
   );
 }

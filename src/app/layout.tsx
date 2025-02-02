@@ -7,6 +7,7 @@ import { DATA } from "@/data/resume";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import Navbar from "@/components/navbar";
 import { Toaster } from 'sonner';
+import { AiChatProvider } from "@/contexts/AiChatContext";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -78,8 +79,10 @@ export default function RootLayout({
           disableTransitionOnChange
         >
           <TooltipProvider delayDuration={0}>
-            {children}
-            <Navbar />
+            <AiChatProvider>
+              {children}
+              <Navbar />
+            </AiChatProvider>
           </TooltipProvider>
           <Toaster />
         </ThemeProvider>

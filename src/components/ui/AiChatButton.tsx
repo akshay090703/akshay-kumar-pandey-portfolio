@@ -1,20 +1,27 @@
-"use client"
+"use client";
 
-import React from 'react'
-import { Button } from './button';
-import { Bot } from 'lucide-react';
-import AiChatBox from '../AiChatBox';
-import { useAiChat } from '@/contexts/AiChatContext';
+import React, { forwardRef } from "react";
+import { Button } from "./button";
+import { Bot } from "lucide-react";
+import { useAiChat } from "@/contexts/AiChatContext";
 
-const AiChatButton = () => {
-    const { chatboxOpen, setChatboxOpen } = useAiChat();
-    return (
-        <>
-            <Button variant={'ghost'} size={'icon'} onClick={() => setChatboxOpen(!chatboxOpen)}>
-                <Bot size={24} />
-            </Button>
-        </>
-    )
-}
+const AiChatButton = forwardRef<HTMLDivElement, React.HTMLAttributes<HTMLDivElement>>(
+    ({ ...props }, ref) => {
+        const { chatboxOpen, setChatboxOpen } = useAiChat();
 
-export default AiChatButton
+        return (
+            <div ref={ref} {...props}>
+                <Button
+                    variant="ghost"
+                    size="icon"
+                    onClick={() => setChatboxOpen(!chatboxOpen)}
+                >
+                    <Bot size={24} />
+                </Button>
+            </div>
+        );
+    }
+);
+
+AiChatButton.displayName = "AiChatButton";
+export default AiChatButton;

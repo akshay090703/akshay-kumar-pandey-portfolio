@@ -1,6 +1,7 @@
 "use client"
 
 import AiChatBox from "@/components/AiChatBox";
+import DownloadResumeButton from "@/components/DownloadResumeBtn";
 import EmailForm from "@/components/email-form";
 import { ExtraCurricularCard } from "@/components/extraCurricularCard";
 import { ProjectCard } from "@/components/project-card";
@@ -259,8 +260,13 @@ export default function Home() {
                 soliciting.
               </p>
             </div>
+
+            <div className="flex justify-center mt-7">
+              <DownloadResumeButton />
+            </div>
           </BlurFade>
         </div>
+
       </section>
 
       <AiChatBox open={chatboxOpen} onClose={() => setChatboxOpen(false)} />

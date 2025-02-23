@@ -20,7 +20,7 @@ export const DATA = {
         "A passionate programmer from India. I love to build new applications and learn new technologies on a daily basis.",
     summary:
         "I am a 4th-year BTech student at **_[VIT Bhopal University](/#education)_** with a deep passion for computers and software development. Since childhood, I have been fascinated by how applications work behind the scenes, which led me to pursue **_[Computer Science](/#education)_**. Along the way, I explored **_[web development](/#projects)_** and built multiple projects, gaining hands-on experience in **_[MERN Stack, Next.js, React Native, and Spring Boot](/#skills)_**. Through continuous learning and practical implementation, I have strengthened my expertise in building scalable and efficient applications.",
-    avatarUrl: "/my-photo.jpg",
+    avatarUrl: "/akshay-photo-2.jpg",
     skills: [
         "React",
         "Next.js",
@@ -92,6 +92,18 @@ export const DATA = {
 
     work: [
         {
+            company: "WhatBytes",
+            href: "https://www.whatbytes.com",
+            badges: [],
+            location: "Remote",
+            title: "Backend Developer Intern",
+            logoUrl: "/whatbytes.jpeg",
+            start: "February 2025",
+            end: "Present",
+            description:
+                "Working with our client CuraCare - a dental service startup. Helped resolve a lot of bugs that solved the issue of data loss and saving a lot of physical power.",
+        },
+        {
             company: "IRI EXPERTS Private Limited",
             href: "#",
             badges: [],
@@ -106,7 +118,7 @@ export const DATA = {
         {
             company: "SmartInternz",
             badges: [],
-            href: "https://shopify.com",
+            href: "https://smartinternz.com",
             location: "Remote",
             title: "AI For Cybersecurity Externship",
             logoUrl: "/smartinternz.png",

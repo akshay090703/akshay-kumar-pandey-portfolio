@@ -66,7 +66,7 @@ export default function AiChatBox({ onClose, open }: AiChatBoxProps) {
         if (response.status === 500) {
             setMessages((prev) => [
                 ...prev,
-                { id: crypto.randomUUID(), content: "Something went wrong.", role: "assistant" },
+                { id: crypto.randomUUID(), content: "Something went wrong or Database is down.", role: "assistant" },
             ]);
         } else if (response.status === 200) {
             setMessages((prev) => [

@@ -57,25 +57,28 @@ export default function AiChatBox({ onClose, open }: AiChatBoxProps) {
         setInput("");
         setMessages(updatedMessages);
 
-        const response = await axios.post("/api/chat", {
-            messages: updatedMessages
-        })
+        try {
+            const response = await axios.post("/api/chat", {
+                messages: updatedMessages
+            })
 
-        console.log(response)
+            console.log(response)
 
-        if (response.status === 500) {
+            if (response.status === 200) {
+                setMessages((prev) => [
+                    ...prev,
+                    { id: crypto.randomUUID(), content: response.data.message, role: "assistant" },
+                ])
+            }
+        } catch (error) {
             setMessages((prev) => [
                 ...prev,
-                { id: crypto.randomUUID(), content: "Something went wrong or Database is down.", role: "assistant" },
+                { id: crypto.randomUUID(), content: "Something went wrong or Astra DB is down.", role: "assistant" },
             ]);
-        } else if (response.status === 200) {
-            setMessages((prev) => [
-                ...prev,
-                { id: crypto.randomUUID(), content: response.data.message, role: "assistant" },
-            ])
+        } finally {
+            setIsLoading(false)
         }
 
-        setIsLoading(false)
     }
 
     const lastMessageIsUser = messages[messages.length - 1]?.role === "user";
